@@ -22,11 +22,8 @@
 
         .hero__actions {
             display: flex;
-            flex-flow: row nowrap;
-
-            & > * + * {
-                margin-left: 7px;
-            }
+            flex-flow: row wrap;
+            grid-gap: 7px;
         }
     }
 }
