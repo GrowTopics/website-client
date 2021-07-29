@@ -1,0 +1,77 @@
+@use '../../node_modules/@growstocks/stack/Core/Theme';
+@use '../../node_modules/@growstocks/stack/Core/Typography';
+@use '../../node_modules/@growstocks/stack/Components/SCButton';
+@use 'themes/button-theme' as btn-theme;
+@use 'modules/utilities' as utils;
+
+$primary: #203744;
+$secondary: #569580;
+
+$breakpoints: (
+    'small': 320px,
+    'medium': 540px,
+    'large': 870px
+);
+
+:root {
+    @include Theme.config(
+        $primary,
+        $secondary,
+        $breakpoints,
+        $input: #abbbcf,
+        $on-input: #fff,
+        $growtopics-pink: #e59bdd
+    );
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@include Typography.config(
+    $global-font: 'Inter',
+    $title-font: 'Playfair Display',
+    $title-font-type: serif,
+);
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+
+    &::before,
+    &::after {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+
+    }
+}
+
+html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--sc-theme--primary-dark);
+    color: var(--sc-theme--on-primary);
+}
+
+.content-wrap {
+    width: calc(100% - 20px);
+    max-width: 1077px;
+}
+
+@include SCButton.render(
+    $color-theme: btn-theme.$color-theme,
+    $type: (
+        'text',
+        'outlined',
+        'filled'
+    )
+);
