@@ -2,6 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://growtopics.github.io/website-client",
   "dependencies": {
     "@growstocks/stack": "^2.0.1",
     "@testing-library/jest-dom": "^5.14.1",
