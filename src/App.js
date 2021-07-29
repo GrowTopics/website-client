@@ -22,7 +22,7 @@ function App() {
                                   <span className="sc-button__label">Visit the blog</span>
                               </button>
                           </a>
-                          <a href="https://status.growtopics.xyz" target="_blank" rel="noreferrer">
+                          <a href="http://status.growtopics.xyz" target="_blank" rel="noreferrer">
                               <button className="hero__button sc-button sc-button--outlined">
                                   <span className="sc-button__label">GrowTopics Status</span>
                               </button>
